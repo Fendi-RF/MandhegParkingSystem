@@ -246,14 +246,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MandhegParkingSystem472.exe" size="104944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MandhegParkingSystem472.exe" size="105456">
       <assemblyIdentity name="MandhegParkingSystem472" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CJ27W6p761/J7ZojhhyVkh8FCUcoEePyXiItXqBZ/NE=</dsig:DigestValue>
+        <dsig:DigestValue>Nl4b9BYmb29ZdhpDvCZxmEN9F2f+JviBs+YBmNlnHUg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

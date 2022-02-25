@@ -54,12 +54,14 @@ namespace MandhegParkingSystem472.GUI
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 1)
+            if (e.RowIndex > -1)
             {
+                //DataTable dt = dataGridView1.DataSource as DataTable;
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                //DataRow row = dt.Rows[e.RowIndex];
 
                 ImgID = row.Cells[0].Value.ToString();
-                textBox1.Text = row.Cells[1].ToString();
+                pictureBox1.Image = binaryToImg((byte[])row.Cells[1].Value);
             }
         }
 
@@ -81,7 +83,7 @@ namespace MandhegParkingSystem472.GUI
             {
                 conn.Close();
             }
-            dataGridView1.Refresh();
+            konn.SetDataGrid("*", "Image", dataGridView1);
         }
         byte[] imgTOBinary(Image img)
         {
@@ -89,6 +91,13 @@ namespace MandhegParkingSystem472.GUI
             {
                 img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 return ms.ToArray();
+            }
+        } 
+        Image binaryToImg(byte[] bytes)
+        {
+            using(MemoryStream ms = new MemoryStream(bytes))
+            {
+                return Image.FromStream(ms);
             }
         }
     }
